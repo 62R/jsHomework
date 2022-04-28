@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        /**
+         * Функция складывает 2 числа.
+         * @param {number} num1 первое слагаемое.
+         * @param {number} num2 второе слогаемое.
+         * @returns {number} результат сложения чисел.     
+         */
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+
+        /**
+         * Функция вычитает второе число из первого.
+         * @param {number} num1 число из которого вычитается.
+         * @param {number} num2 вычитаемое.
+         * @returns {number} результат вычитания из первого числа второго.
+         */
+        function subtract(num1, num2) {
+            return num1 - num2;
+        }
+
+        /**
+         * Функция умножает 2 числа.
+         * @param {number} num1 первый множитель.
+         * @param {number} num2 втрогой множитель.
+         * @returns {number} результат умножения двух чисел.
+         */
+        function multiply(num1, num2) {
+            return num1 * num2;
+        }
+
+        /**
+         * Функция делить первое число на второе.
+         * @param {number} num1 делимое.
+         * @param {number} num2 делитель.
+         * @returns {number} результат деления первого числа на второе.
+         */
+        function divide(num1, num2) {
+            return num1 / num2;
+        }
+
+
+        let num1 = +prompt('Введите первое число:');
+        let num2 = +prompt('Введите второе число:');
+
+        alert(add(num1, num2));
+        alert(subtract(num1, num2));
+        alert(multiply(num1, num2));
+        alert(divide(num1, num2));
+
+    </script>
+</body>
+
+</html>

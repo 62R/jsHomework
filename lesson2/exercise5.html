@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        /**
+         * Функция складывает 2 числа.
+         * @param {number} num1 первое слагаемое.
+         * @param {number} num2 второе слогаемое.
+         * @returns {number} результат сложения чисел.     
+         */
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+
+        /**
+         * Функция вычитает второе число из первого.
+         * @param {number} num1 число из которого вычитается.
+         * @param {number} num2 вычитаемое.
+         * @returns {number} результат вычитания из первого числа второго.
+         */
+        function subtract(num1, num2) {
+            return num1 - num2;
+        }
+
+        /**
+         * Функция умножает 2 числа.
+         * @param {number} num1 первый множитель.
+         * @param {number} num2 втрогой множитель.
+         * @returns {number} результат умножения двух чисел.
+         */
+        function multiply(num1, num2) {
+            return num1 * num2;
+        }
+
+        /**
+         * Функция делить первое число на второе.
+         * @param {number} num1 делимое.
+         * @param {number} num2 делитель.
+         * @returns {number} результат деления первого числа на второе.
+         */
+        function divide(num1, num2) {
+            return num1 / num2;
+        }
+
+
+        let num1 = +prompt('Введите первое число:');
+        let num2 = +prompt('Введите второе число:');
+        let operation = prompt('Введите операцию которую хотите использовать:')
+
+        /**
+         * Функция выполняет математическую операцию (+,-,*,/)  для двух чисел.
+         * @param {number} arg1 первый аргумент.
+         * @param {number} arg2 второй аргумент.
+         * @param {string} operation название или математический знак операции которую необходимо выполнить.
+         * @returns {number} результат выполнения математической операции записанной в ввиде arg1 +*-/ arg2.
+         */
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "+":
+                case "сложение":
+                    return add(arg1, arg2);
+                case "-":
+                case "вычитание":
+                    return subtract(arg1, arg2);
+                case "*":
+                case "умножение":
+                    return multiply(arg1, arg2);
+                case "/":
+                case "деление":
+                    return divide(arg1, arg2);
+            }
+        }
+
+        alert(mathOperation(num1, num2, operation));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        /**
+         * Функция определяет корректное окончание для слова "рубль" для заданного числа.
+         * @param {number} rubles количесто рублей
+         * @returns {string} возвращает слово "рубль" с корректным окончанием
+         */
+        function choiceOfEnding(rubles) {
+            let numberLenght = String(rubles).length;
+            let twoLastNumber = String(rubles).charAt(numberLenght - 2) + String(rubles).charAt(numberLenght - 1);
+
+            switch (twoLastNumber) {
+                case '11':
+                case '12':
+                case '13':
+                case '14':
+                    return 'рублей';
+            }
+
+            let lastNumber = String(rubles).charAt(numberLenght - 1);
+
+            switch (lastNumber) {
+                case '1':
+                    return 'рубль';
+                case '2':
+                case '3':
+                case '4':
+                    return 'рубля';
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                case '0':
+                    return 'рублей';
+
+            }
+        }
+
+        let rubles = +prompt('Введите сумму для зачисления:');
+        alert(`Ваша сумма в ${rubles} ${choiceOfEnding(rubles)} успешна зачислена.`)
+
+    </script>
+</body>
+
+</html>
