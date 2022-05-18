@@ -44,7 +44,7 @@
          * @returns (boolean) Если элемент пустой вернет false.
          */
         function isEmpty(elem) {
-            if ((elem == NaN) || (elem == undefined) || (elem == null) || (elem == '')) {
+            if (elem == undefined || elem == null || elem.length == 0) {
                 return false;
             }
             return true;
@@ -61,12 +61,10 @@
             if (product1.price < product2.price) {
                 return -1;
             }
-            if (product1.price = product2.price) {
-                return 0;
-            }
-        })
+            return 0;
+        });
 
-        console.log(products)
+        console.log(products);
 
     </script>
 </body>
