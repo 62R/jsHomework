@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        class NumberAsObject {
+            constructor(number) {
+                if (!Number.isInteger(number) || isNaN(number)) {
+                    console.log('Переданно не целое число');
+                    return {};
+                };
+                this.units = number % 10;
+                this.tens = Math.floor(number / 10) % 10;
+                this.hundreds = Math.floor(number / 100) % 10;
+            }
+        }
+
+        let num1 = new NumberAsObject(+prompt('Введите числов в диапазоне [0, 999]'));
+
+        console.log(num1);
+
+    </script>
+</body>
+
+</html>
